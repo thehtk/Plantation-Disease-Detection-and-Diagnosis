@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static\styles.css">
+    <title>Your Website</title>
+</head>
+<body>
+    <header>
+        <h1>Agronomist.AI</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">How to Use</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+    <body>
+        <h1 class="text-center"> Plant Diseases Detection </h1>
+
+        <form class="p-3 text-center" action='/' method="POST" enctype="multipart/form-data">
+            <input class="form-control" type="file" name="imagefile">
+            <input class="btn btn-primary mt-3"type="submit" value="Predict Image">
+        </form>
+
+        {% if prediction %}
+        <p class="text-center"> Image is a {{prediction}}</p>
+        {% endif %}
+
+    <footer class="footer">
+        Designed By Shreya, Kunal, Hitesh, and Sakhsam
+    </footer>
+</body>
+</html>
